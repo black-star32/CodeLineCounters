@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-4">
+                <form method="post">
+                    {{ form.csrf_token }}
+                    <div class="form-group">
+                        {{ form.username.label }}
+                        {{ form.username(class='form-control') }}
+                        {% for message in form.username.errors %}
+                            <small class="error">{{ message }}</small>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.nickname.label }}
+                        {{ form.nickname(class='form-control') }}
+                        {% for message in form.nickname.errors %}
+                            <small class="error">{{ message }}</small>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.password.label }}
+                        {{ form.password(class='form-control') }}
+                        {% for message in form.password.errors %}
+                            <small class="error">{{ message }}</small>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.password_confirm.label }}
+                        {{ form.password_confirm(class='form-control') }}
+                        {% for message in form.password_confirm.errors %}
+                            <small class="error">{{ message }}</small>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.submit(class='btn btn-primary') }}
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,5 @@
+current_dir=$(cd `dirname $0`; pwd)
+export PYTHONPATH=$current_dir:$PYTHONPATH
+source $current_dir/my_info
+
+python $current_dir/scripts/one_click_switch_by_employee_id.py 100394 $my_cookie $my_employee_ID
