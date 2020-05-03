@@ -1,5 +1,0 @@
-current_dir=$(cd `dirname $0`; pwd)
-export PYTHONPATH=$current_dir:$PYTHONPATH
-source $current_dir/my_info
-
-python $current_dir/scripts/back_to_me.py $my_cookie $my_employee_ID
