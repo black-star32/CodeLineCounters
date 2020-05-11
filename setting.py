@@ -11,7 +11,7 @@ class config(object):
 
     using_pymysql = True
     mysql_protocal = "mysql+pymysql" if using_pymysql else "mysql"
-    SQLALCHEMY_DATABASE_URI = "{}://root:Fengbo123@127.0.0.1:3306/codeline?charset=utf8mb4".format(mysql_protocal)
+    SQLALCHEMY_DATABASE_URI = "{}://username:password@127.0.0.1:3306/codeline?charset=utf8mb4".format(mysql_protocal)
     SQLALCHEMY_SIZE = 5
     SQLALCHEMY_POOL_RECYCLE = 300
 
